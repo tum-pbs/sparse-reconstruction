@@ -1,0 +1,46 @@
+Type: "fm"
+
+Data:
+  case: "iso"
+  grid_size: 128
+  grid_size_ae: 32
+  norm: true
+  size: 500
+  Nx: 192
+  Ny: 64
+  Nz: 192
+
+Model:
+  channel_size: 3 
+  channel_size_out: 3  
+  partition_size: [1, 1, 1]  
+  drop_class_labels: True  
+  
+  save_path: "/mnt/data1/navarro/runs/023/epoch_2000_0.0351_0.0538.pth" # ddpm, config, batch 4
+
+  #save_path: "/mnt/data1/navarro/runs/003/epoch_300_0.0229_0.0431.pth" # reg, std 5%
+  #save_path: "/mnt/data1/navarro/runs/028/epoch_300_0.0311_0.0481.pth" # reg, std /4
+  #save_path: "/mnt/data1/navarro/runs/069/epoch_100_0.0501_0.0758.pth" # reg, std 0.5%
+  #save_path: "/mnt/data1/navarro/runs/075/epoch_100_0.0714_0.1105.pth" # reg, std 0.1%
+  #save_path: "/mnt/data1/navarro/runs/092/epoch_200_0.0323_0.0573.pth" # reg, std 1.5%
+
+Training:
+  method: "PINN_dyn"
+  epochs: 200
+  batch_size: 1
+  effective_batch_size: 1
+  learning_rate: 0.0001
+  divergence_loss_weight: 1e-1
+  sigma_min: 0.0
+  ddpm_loss_weight: 1e-3
+  gamma: 0.995
+  last_lr: 1e-5
+
+Diffusion:
+  beta_schedule: linear
+  num_diffusion_timesteps: 1000
+  beta_start: 0.0001
+  beta_end: 0.02
+  mask_schedule_sig: 3
+
+device: "cuda:0"

@@ -38,3 +38,4 @@ class UniProjectionLength(LengthModel):
         if unit_target_vector is None:
             unit_target_vector = unit_vector(target_vector)
         return torch.sum(torch.stack([torch.dot(unit_vector(grad_i),unit_target_vector) for grad_i in gradients]))
+    

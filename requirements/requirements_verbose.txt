@@ -1,0 +1,25 @@
+lightning
+omegaconf
+einops
+lightning-bolts
+torchvision
+matplotlib
+diffusers>=0.28.2
+torch-fidelity
+wandb>=0.12.10
+numpy==1.26.4 # numpy 2.0.0 is not supported by torch
+transformers>=4.42.3
+accelerate
+neuraloperator==0.3.0
+torch_harmonics>=0.7.2
+moviepy
+pandas
+imageio
+timm
+vape4d
+GIFt @ git+https://github.com/qiauil/GIFt@main
+torchprofile
+adabelief_pytorch
+# would be safer to install GIFt locally
+pbdl @ git+https://github.com/tum-pbs/pbdl-dataset@main
+

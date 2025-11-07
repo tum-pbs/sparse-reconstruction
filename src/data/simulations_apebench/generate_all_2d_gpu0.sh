@@ -1,0 +1,1 @@
+python simulation.py --dimension 2 --pde kolm_flow --out_name kolm_flow --num_sims 600 --gpu_id 0
