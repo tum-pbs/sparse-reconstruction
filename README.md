@@ -3,7 +3,10 @@
 <img src="./figures/example_reconstruction.png" />
 
 <p align="center">
-This is code is the implementation of the framework presented in our article <b>"Guiding diffusion models to reconstruct flow fields from sparse data"</b> <br> [<a href="https://arxiv.org/abs/2510.19971v1">Arxiv</a>]
+This repository contains the reference implementation of the framework presented in the article <b>“Guiding diffusion models to reconstruct flow fields from sparse data”</b>, accepted for publication in Physics of Fluids (<a href="https://doi.org/10.1063/5.0304492">https://doi.org/10.1063/5.0304492</a>).
+ <br>
+[<a href="https://pubs.aip.org/aip/pof/article/38/1/015112/3376992">Physics of Fluids</a>]
+[<a href="https://arxiv.org/abs/2510.19971v1">Arxiv</a>]
 </p>
 
 
@@ -24,4 +27,18 @@ The used dataset can be downloaded on the [repo](https://github.com/BaratiLab/Di
 The training of these models was done using the `trainer.py` script. Run `python trainer.py --help` to visualize all the possible parameters, one example command can be:
 ```
 python trainer.py --epochs 1000 --ndata 3000 --batch 5 --lr 1e-4 --eq_res 1e-5 --gamma 0.98 --last_lr 1e-5 --device 0 --loss_m l2 --method ConFIG
+```
+
+## Citing
+```
+@article{amoros2026guiding,
+  title={Guiding diffusion models to reconstruct flow fields from sparse data},
+  author={Amorós-Trepat, Marc and Medrano-Navarro, Luis and Liu, Qiang and Guastoni, Luca and Thuerey, Nils},
+  journal={Physics of Fluids},
+  volume={38},
+  number={1},
+  year={2026},
+  publisher={AIP Publishing},
+  url = {https://doi.org/10.1063/5.0304492},
+}
 ```
